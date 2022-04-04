@@ -1,0 +1,20 @@
+<div class="card" [style.background]="pokemonColor">
+  <div class="card-header">
+    <h5 class="card-title">{{ pokemon?.name }}</h5>
+  </div>
+  <div class="img-container">
+    <img
+      class="card-img-top"
+      src="{{ pokemon?.sprites?.other?.dream_world?.front_default }}"
+      alt="Imagem {{ pokemon?.name }}"
+    />
+  </div>
+  <div class="card-body">
+    <span class="card-types" *ngFor="let name of type"> {{ name }} </span>
+  </div>
+  <div class="card-footer">
+    <button type="button" class="btn btn-primary btn-lg btn-block">
+      Detalhes
+    </button>
+  </div>
+</div>

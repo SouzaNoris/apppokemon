@@ -1,0 +1,19 @@
+<div class="container-fluid">
+  <h2 class="text-center">Lista de Pokémons!</h2>
+
+  <hr />
+
+  <div class="row" style="height: 65vh; overflow: auto">
+    <app-card
+      class="col-sm-3"
+      [paginated]="pokemon"
+      *ngFor="let pokemon of pokemonsList"
+    >
+    </app-card>
+  </div>
+
+  <hr />
+  <div class="row">
+    <p>Aqui a paginação</p>
+  </div>
+</div>
