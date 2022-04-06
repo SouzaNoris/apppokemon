@@ -1,0 +1,19 @@
+<nav aria-label="pokemon navigation">
+  <ul class="pagination justify-content-center">
+    <li class="page-item disabled" [class.disabled]="firstElement">
+      <a class="page-link" (click)="previous()">Anterior</a>
+    </li>
+    <li
+      class="page-item"
+      *ngFor="let paginated of countPaginator"
+      [class.active]="paginated.selected"
+    >
+      <a class="page-link" (click)="nextPaginatorIndex(paginated)">{{
+        paginated.count
+      }}</a>
+    </li>
+    <li class="page-item" [class.disabled]="lastElement">
+      <a class="page-link" (click)="next()">Próximo</a>
+    </li>
+  </ul>
+</nav>

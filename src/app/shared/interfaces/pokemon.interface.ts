@@ -3,9 +3,8 @@ import { IForms } from './forms.interface';
 import { IGameIndices } from './game_indices.interface';
 import { IHeldItems } from './held_items.interface';
 import { IMoves } from './moves.interface';
-import { IPaginatedResult } from './paginated-result.interface';
 import { IPastTypes } from './past_types.interface';
-import { ISpecies } from './species.interface';
+import { ISpecies, ISpeciesModel } from './species.interface';
 import { ISprites } from './sprites.interface';
 import { IStats } from './stats.interface';
 import { ITypes } from './types.interface';
@@ -25,6 +24,7 @@ export interface IPokemon {
   location_area_encounters: string;
   moves: IMoves[];
   species: ISpecies;
+  speciesModel: ISpeciesModel;
   sprites: ISprites;
   stats: IStats[];
   types: ITypes[];

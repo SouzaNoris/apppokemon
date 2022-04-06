@@ -22,6 +22,21 @@
             text-transform: uppercase;
             text-align: center;
         }
+
+        .img-star {
+            &:hover {
+                cursor: pointer;
+            }
+
+            &.favorite svg {
+                fill: yellow;
+            }
+
+            svg {
+                width: 25px;
+                height: 25px;
+            }
+        }
     }
 
     .card-body {

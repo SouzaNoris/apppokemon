@@ -1,0 +1,36 @@
+.container-loader {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.66) no-repeat 0 0;
+
+    &.visibility {
+        visibility: hidden;
+    }
+}
+
+#spinner {
+	-webkit-animation: frames 1s infinite linear;
+	animation: frames 1s infinite linear;
+	background: transparent;
+	border-radius: 100%;
+	width: 20vw;
+	height: 20vw;
+	opacity: .6;
+	padding: 0;
+	position: absolute;
+	z-index: 999;
+}
+
+@keyframes frames {
+  0% {
+	-webkit-transform: rotate(0deg);
+	transform: rotate(0deg);
+  }
+  100% {
+	-webkit-transform: rotate(359deg);
+	transform: rotate(359deg);
+  }
+}

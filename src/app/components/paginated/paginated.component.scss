@@ -1,0 +1,9 @@
+.page-item {
+  .page-link:hover {
+    cursor: pointer;
+  }
+
+  &.disabled:hover {
+    cursor: no-drop;
+  }
+}

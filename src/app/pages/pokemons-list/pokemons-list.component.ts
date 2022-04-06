@@ -9,6 +9,7 @@ import { PokemonService } from 'src/app/shared/services/pokemon.service';
   styleUrls: ['./pokemons-list.component.scss'],
 })
 export class PokemonsListComponent implements OnInit {
+  pokePaginated: IPaginated = { count: 0, next: '', previous: '', results: [] };
   pokemonsList: IPokemonPaginated[] = [];
 
   constructor(private pokemonService: PokemonService) {}
@@ -19,7 +20,12 @@ export class PokemonsListComponent implements OnInit {
 
   getAllPokemon(): void {
     this.pokemonService.getAllPokemons().subscribe((response: IPaginated) => {
+      this.pokePaginated = response;
       this.pokemonsList = [...response.results];
     });
+  }
+
+  reload(data: any[]): void {
+    this.pokemonsList = [...data];
   }
 }

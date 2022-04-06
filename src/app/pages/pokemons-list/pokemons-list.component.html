@@ -3,7 +3,7 @@
 
   <hr />
 
-  <div class="row" style="height: 65vh; overflow: auto">
+  <div class="row" style="height: 75vh; overflow: auto">
     <app-card
       class="col-sm-3"
       [paginated]="pokemon"
@@ -13,7 +13,7 @@
   </div>
 
   <hr />
-  <div class="row">
-    <p>Aqui a paginação</p>
+  <div class="row container-paginated">
+    <app-paginated [paginated]="pokePaginated" (eventReload)="reload($event)"></app-paginated>
   </div>
 </div>

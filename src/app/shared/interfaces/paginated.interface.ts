@@ -5,4 +5,5 @@ export interface IPaginated {
   next: string;
   previous: string;
   results: IPaginatedResult[];
+  selected?: boolean;
 }
