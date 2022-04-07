@@ -9,7 +9,7 @@ import { LoaderService } from 'src/app/shared/services/loader.service';
 export class LoadingComponent implements OnInit {
   hideLoader: boolean = true;
 
-  constructor(private loaderService: LoaderService) {}
+  constructor(public loaderService: LoaderService) {}
 
   ngOnInit(): void {
     this.loaderService.loader.subscribe((loader) => {

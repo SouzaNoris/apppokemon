@@ -28,8 +28,8 @@ export class CardComponent implements OnInit, OnChanges {
   type: string[] = [];
 
   constructor(
-    private pokemonService: PokemonService,
-    protected favoriteService: FavoriteService
+    public pokemonService: PokemonService,
+    public favoriteService: FavoriteService
   ) {}
 
   ngOnChanges(changes: SimpleChanges): void {

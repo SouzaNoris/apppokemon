@@ -12,7 +12,7 @@ export class PokemonsListComponent implements OnInit {
   pokePaginated: IPaginated = { count: 0, next: '', previous: '', results: [] };
   pokemonsList: IPokemonPaginated[] = [];
 
-  constructor(private pokemonService: PokemonService) {}
+  constructor(public pokemonService: PokemonService) {}
 
   ngOnInit(): void {
     this.getAllPokemon();
